@@ -6,7 +6,7 @@ A modern and fully responsive **restaurant website** built using **HTML, CSS, an
 
 ## 🎬 Live Demo  
 
-📽️ [**View Website**](https://yourusername.github.io/zestha-restaurant)  
+📽️ [**View Website**](https://github.com/vinithasriprathipati/zestha/blob/a9565495fdce3f30cc4ccc86737fbae30db6966f/Zestha%20Website%20Demo%20Video.mp4)  
 
 *Showcasing sleek design, smooth navigation, and dynamic user interactions.*  
 
