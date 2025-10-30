@@ -2,8 +2,6 @@
 
 A modern and fully responsive **restaurant website** built using **HTML, CSS, and JavaScript**, offering an elegant design, smooth animations, and interactive features for an enhanced digital dining experience.  
 
-![Zestha Restaurant](https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=400&fit=crop)
-
 ---
 
 ## 🎬 Live Demo  
