@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zestha - Authentic Italian Dining Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+
+    <!-- Special Offer Modal -->
+    <div id="specialModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>🎉 Today's Special!</h2>
+            <div id="todaySpecial"></div>
+            <p class="modal-validity">Valid only for today</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <nav>
+            <div class="logo">Zestha</div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#reservation" class="nav-link">Reserve</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Welcome to Zestha</h1>
+            <p class="fade-in-delay">Authentic Italian Cuisine in the Heart of Mumbai</p>
+            <div class="hero-buttons fade-in-delay-2">
+                <a href="#reservation" class="btn btn-primary">Book a Table</a>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>A Tradition of Excellence</h3>
+                    <p>Founded in 2010, Zestha has been serving authentic Italian cuisine with a passion for quality and tradition. Our recipes have been passed down through generations, bringing the true flavors of Italy to Mumbai.</p>
+                    <p>Every dish is crafted with love, using only the finest imported ingredients and locally sourced fresh produce. Our chefs combine traditional techniques with modern culinary artistry to create unforgettable dining experiences.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>15+</h4>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50K+</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100+</h4>
+                            <p>Signature Dishes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop" alt="Restaurant interior">
+                </div>
+            </div>
+
+            <div class="chef-section">
+                <div class="chef-image">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&h=600&fit=crop" alt="Chef">
+                </div>
+                <div class="chef-info">
+                    <h3>Meet Our Head Chef</h3>
+                    <h4>Marco Rossini</h4>
+                    <p>With over 20 years of culinary experience across Italy and India, Chef Marco brings authentic Italian flavors to every plate. Trained in Rome and Milan, he specializes in traditional pasta-making and wood-fired pizza.</p>
+                    <p>"Cooking is an art, and every dish tells a story. At Zestha, we pour our hearts into creating memories for our guests." - Chef Marco</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="appetizer">Starters</button>
+                <button class="category-btn" data-category="main">Main Course</button>
+                <button class="category-btn" data-category="dessert">Desserts</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Appetizers -->
+                <div class="menu-item" data-category="appetizer">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=600&h=400&fit=crop" alt="Bruschetta">
+                        <span class="item-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Bruschetta</h3>
+                        <p>Toasted bread topped with fresh tomatoes, garlic, basil, and olive oil</p>
+                        <span class="price">₹450</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizer">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=600&h=400&fit=crop" alt="Caprese Salad">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Caprese Salad</h3>
+                        <p>Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze</p>
+                        <span class="price">₹550</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizer">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=600&h=400&fit=crop" alt="Garlic Prawns">
+                        <span class="item-badge special">Chef's Special</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Garlic Prawns</h3>
+                        <p>Succulent prawns sautéed in garlic butter with white wine</p>
+                        <span class="price">₹850</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizer">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=600&h=400&fit=crop" alt="Antipasto">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Antipasto Platter</h3>
+                        <p>Assorted Italian cured meats, cheeses, olives, and grilled vegetables</p>
+                        <span class="price">₹880</span>
+                    </div>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=400&fit=crop" alt="Margherita Pizza">
+                        <span class="item-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Margherita Pizza</h3>
+                        <p>Classic wood-fired pizza with tomato sauce, mozzarella, and fresh basil</p>
+                        <span class="price">₹750</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600&h=400&fit=crop" alt="Fettuccine Alfredo">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fettuccine Alfredo</h3>
+                        <p>Creamy parmesan sauce with fresh fettuccine pasta</p>
+                        <span class="price">₹850</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1619895092538-128341789043?w=600&h=400&fit=crop" alt="Lasagna">
+                        <span class="item-badge special">Chef's Special</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Lasagna Bolognese</h3>
+                        <p>Layers of pasta with rich meat sauce and béchamel</p>
+                        <span class="price">₹950</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1633504581786-316c8002b1b9?w=600&h=400&fit=crop" alt="Seafood Risotto">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Seafood Risotto</h3>
+                        <p>Creamy Arborio rice with mixed seafood and saffron</p>
+                        <span class="price">₹1,200</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=600&h=400&fit=crop" alt="Spaghetti Carbonara">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>Classic Roman pasta with eggs, pancetta, and pecorino</p>
+                        <span class="price">₹820</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&h=400&fit=crop" alt="Ravioli">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Ravioli al Tartufo</h3>
+                        <p>Handmade ravioli stuffed with ricotta in truffle cream sauce</p>
+                        <span class="price">₹1,100</span>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&h=400&fit=crop" alt="Tiramisu">
+                        <span class="item-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tiramisu</h3>
+                        <p>Classic Italian dessert with coffee-soaked ladyfingers and mascarpone</p>
+                        <span class="price">₹450</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop" alt="Panna Cotta">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Panna Cotta</h3>
+                        <p>Smooth vanilla cream dessert with berry compote</p>
+                        <span class="price">₹400</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop" alt="Gelato">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Gelato Trio</h3>
+                        <p>Three scoops of authentic Italian gelato - your choice of flavors</p>
+                        <span class="price">₹500</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=600&h=400&fit=crop" alt="Chocolate Lava Cake">
+                        <span class="item-badge special">Chef's Special</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Warm chocolate cake with molten center, served with vanilla gelato</p>
+                        <span class="price">₹520</span>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&h=400&fit=crop" alt="Espresso">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Italian Espresso</h3>
+                        <p>Rich and bold espresso made from premium Italian beans</p>
+                        <span class="price">₹180</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?w=600&h=400&fit=crop" alt="Wine">
+                        <span class="item-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>House Red Wine</h3>
+                        <p>Premium Italian Chianti, perfect complement to any meal</p>
+                        <span class="price">₹650/glass</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&h=400&fit=crop" alt="Limoncello">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Limoncello</h3>
+                        <p>Traditional Italian lemon liqueur, served chilled</p>
+                        <span class="price">₹450</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=600&h=400&fit=crop" alt="Cappuccino">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Classic Italian coffee with steamed milk and foam</p>
+                        <span class="price">₹220</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">A glimpse into our culinary artistry and elegant ambiance</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop" alt="Restaurant interior">
+                    <div class="gallery-overlay">
+                        <span>View Image</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Dining area">
+                    <div class="gallery-overlay">
+                        <span>View Image</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop" alt="Food preparation">
+                    <div class="gallery-overlay">
+                        <span>View Image</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&h=600&fit=crop" alt="Plated dish">
+                    <div class="gallery-overlay">
+                        <span>View Image</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop" alt="Wine selection">
+                    <div class="gallery-overlay">
+                        <span>View Image</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop" alt="Elegant dining">
+                    <div class="gallery-overlay">
+                        <span>View Image</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Gallery image" id="lightboxImg">
+        <button class="lightbox-nav prev">❮</button>
+        <button class="lightbox-nav next">❯</button>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <p>"An absolutely divine experience! The pasta was cooked to perfection and the ambiance was romantic and elegant. Best Italian restaurant in Mumbai!"</p>
+                    <h4>Priya Sharma</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Chef Marco's special lasagna is out of this world. The service was impeccable and the wine selection is impressive. Will definitely return!"</p>
+                    <h4>Rahul Mehta</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Perfect spot for a date night. The tiramisu was heavenly and the staff made us feel so welcome. Highly recommended!"</p>
+                    <h4>Ananya Desai</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h2>Reserve Your Table</h2>
+                    <p>Experience authentic Italian cuisine in an elegant setting. Book your table now and let us create unforgettable memories for you.</p>
+                    
+                    <div class="opening-hours">
+                        <h3>Opening Hours</h3>
+                        <div class="hours-grid">
+                            <div class="hours-item">
+                                <span class="day">Monday - Thursday</span>
+                                <span class="time" id="weekdayHours">12:00 PM - 11:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Friday - Saturday</span>
+                                <span class="time">12:00 PM - 12:00 AM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Sunday</span>
+                                <span class="time">11:00 AM - 11:00 PM</span>
+                            </div>
+                        </div>
+                        <p class="current-status" id="currentStatus"></p>
+                    </div>
+                </div>
+
+                <div class="reservation-form-container">
+                    <form id="reservationForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date *</label>
+                                <input type="date" id="date" required>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="time">Time *</label>
+                                <input type="time" id="time" required>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <select id="guests" required>
+                                    <option value="">Select guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6+ Guests</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occasion">Occasion</label>
+                                <select id="occasion">
+                                    <option value="">Select occasion</option>
+                                    <option value="birthday">🎂 Birthday</option>
+                                    <option value="anniversary">💍 Anniversary</option>
+                                    <option value="business">💼 Business</option>
+                                    <option value="casual">🍽️ Casual Dining</option>
+                                    <option value="date">❤️ Date Night</option>
+                                    <option value="celebration">🎉 Celebration</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="requests">Special Requests</label>
+                            <textarea id="requests" rows="3" placeholder="Any dietary restrictions or special requirements?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get exclusive offers, recipes, and updates delivered to your inbox</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Culinary Street<br>Bandra West, Mumbai<br>Maharashtra 400050</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210<br>+91 22 2650 1234</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@zestha.com<br>reservations@zestha.com</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="#" aria-label="Zomato">
+                            <i class="fas fa-utensils"></i> Zomato
+                        </a>
+                        <a href="#" aria-label="Swiggy">
+                            <i class="fas fa-motorcycle"></i> Swiggy
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contactName">Name *</label>
+                            <input type="text" id="contactName" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" rows="5" required></textarea>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4847584444555!2d72.82772731490214!3d19.05728658710998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c94d3b3c3b3b%3A0x3b3c3b3c3b3c3b3c!2sBandra%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <a href="https://maps.google.com/?q=Bandra+West+Mumbai" target="_blank" class="map-direction-btn">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Zestha</h3>
+                    <p>Bringing authentic Italian flavors to Mumbai since 2010</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#reservation">Reservations</a></li>
+                        <li><a href="#">Private Events</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Zomato">
+                            <i class="fas fa-utensils"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zestha Restaurant. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
