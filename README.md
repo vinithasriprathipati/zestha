@@ -33,3 +33,11 @@ A modern and fully responsive **restaurant website** built using **HTML, CSS, an
 ---
 
 ## 📂 Project Structure  
+
+| File | Description | Link |
+|------|--------------|------|
+| `index.html` | Main homepage structure of the website | [View File](https://github.com/vinithasriprathipati/zestha/blob/main/index.html) |
+| `style.css` | Handles all layout, colors, fonts, and animations | [View File](https://github.com/vinithasriprathipati/zestha/blob/main/style.css) |
+| `script.js` | Adds interactivity (menu filters, sliders, modals, etc.) | [View File](https://github.com/vinithasriprathipati/zestha/blob/main/script.js) |
+
+---
