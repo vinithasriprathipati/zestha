@@ -36,8 +36,8 @@ A modern and fully responsive **restaurant website** built using **HTML, CSS, an
 
 | File | Description | Link |
 |------|--------------|------|
-| `index.html` | Main homepage structure of the website | [View File](https://github.com/vinithasriprathipati/zestha/blob/main/index.html) |
-| `style.css` | Handles all layout, colors, fonts, and animations | [View File](https://github.com/vinithasriprathipati/zestha/blob/main/style.css) |
-| `script.js` | Adds interactivity (menu filters, sliders, modals, etc.) | [View File](https://github.com/vinithasriprathipati/zestha/blob/main/script.js) |
+| `index.html` | Main homepage structure of the website | [View File](https://github.com/vinithasriprathipati/zestha/blob/e16b9721641ed7764ad12108629e8df42dc29a89/index.html) |
+| `style.css` | Handles all layout, colors, fonts, and animations | [View File](https://github.com/vinithasriprathipati/zestha/blob/e16b9721641ed7764ad12108629e8df42dc29a89/styles.css) |
+| `script.js` | Adds interactivity (menu filters, sliders, modals, etc.) | [View File](https://github.com/vinithasriprathipati/zestha/blob/e16b9721641ed7764ad12108629e8df42dc29a89/script.js) |
 
 ---
